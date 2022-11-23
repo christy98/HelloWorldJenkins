@@ -19,4 +19,9 @@ pipeline{
           }   
         }
     }
+    post{
+        success{
+            echo "Pipeline is successful"
+        }
+    }
 }
