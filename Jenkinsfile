@@ -14,12 +14,12 @@ pipeline{
         stage("Test"){
             when{
                 expression{
-                    env.BRANCH_NAME =='main' || env.BRANCH_NAME =='master'
+                    NEW_VARIABLE == '1.1.1'
                 }
             }
-          steps{
-            echo "testing the application..."
-          }   
+            steps{
+               echo "testing the application..."
+            }   
         }
         stage("Deploy"){
           steps{
