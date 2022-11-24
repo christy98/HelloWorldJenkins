@@ -14,7 +14,7 @@ pipeline{
         stage("Test"){
             when{
                 expression{
-                    NEW_VARIABLE == '1.1.1'
+                    BRANCH_NAME == "main"
                 }
             }
             steps{
