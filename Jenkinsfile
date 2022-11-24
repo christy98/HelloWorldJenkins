@@ -32,7 +32,7 @@ pipeline{
         stage("Deploy"){
           steps{
             echo "deploying the application..."
-              echo "${VERSION}"
+              echo "${params.VERSION}"
           }   
         }
     }
