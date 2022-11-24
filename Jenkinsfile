@@ -1,11 +1,14 @@
 pipeline{
     agent any
-    
+    environment{
+        NEW_VARIABLE = '1.1.1'
+    }
     stages{
     
         stage("Build"){
           steps{
             echo "building the application..."
+            echo "building the version ${NEW_VARIABLE}"  
           }    
         }
         stage("Test"){
