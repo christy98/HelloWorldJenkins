@@ -3,12 +3,16 @@ pipeline{
     environment{
         NEW_VARIABLE = '1.1.1'
     }
+    tools{
+        maven 'Maven'
+    }
     stages{
     
         stage("Build"){
           steps{
             echo "building the application..."
             echo "building the version ${NEW_VARIABLE}"  
+            mvn --version
           }    
         }
         stage("Test"){
