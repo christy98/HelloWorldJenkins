@@ -11,9 +11,7 @@ pipeline{
         stage("Build"){
           steps{
             echo "building the application..."
-            echo "building the version ${NEW_VARIABLE}"  
-            sh ''' echo "mvn -version"
-            '''
+            echo "building the version ${NEW_VARIABLE}"
           }    
         }
         stage("Test"){
